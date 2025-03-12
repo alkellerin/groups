@@ -80,6 +80,8 @@ document.getElementById("userForm").addEventListener("submit", function(event) {
         user.DOB === dob
     );
 
+    console.log(userGroups[0]);
+
     console.log(userGroups)
     if (user) {
         console.log(`User Found: ${user.FirstName || user.firstName} ${user.LastName?.trim() || user.lastName?.trim()}`);
