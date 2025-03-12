@@ -75,13 +75,14 @@ document.getElementById("userForm").addEventListener("submit", function(event) {
     }
 
     const user = userGroups.find(user =>
-        (user.FirstName?.toLowerCase() || user.fname?.toLowerCase()) === firstName &&
-        (user.LastName?.trim().toLowerCase() || user.lname?.trim().toLowerCase()) === lastName &&
+        (user.FirstName?.toLowerCase() || user.firstName?.toLowerCase()) === firstName &&
+        (user.LastName?.trim().toLowerCase() || user.firstName?.trim().toLowerCase()) === lastName &&
         user.DOB === dob
     );
 
+    console.log(userGroups)
     if (user) {
-        console.log(`User Found: ${user.FirstName || user.fname} ${user.LastName?.trim() || user.lname?.trim()}`);
+        console.log(`User Found: ${user.FirstName || user.firstName} ${user.LastName?.trim() || user.lastName?.trim()}`);
         console.log(`Group Number: ${user.Group}`);
         document.getElementById("result").textContent = `Your Group: ${user.Group}`;
     } else {
