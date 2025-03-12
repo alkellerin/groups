@@ -8,11 +8,20 @@
 
 
 <body>
+    <h2>Find Your Group</h2>
+
+    <form id="userForm">
+        <input type="text" id="firstName" placeholder="Enter First Name" required>
+        <input type="text" id="lastName" placeholder="Enter Last Name" required>
+        <input type="text" id="dob" placeholder="Enter DOB (MM/DD/YYYY)" required>
+        <button type="submit">Find Group</button>
+    </form>
+
+    <div id="result"></div>
 
 
-
-<script type="text/json" src="data.json"></script>
-<script src="findGroupReal.js"></script>
+    <script type="text/json" src="data.json"></script>
+    <script src="findGroupReal.js"></script>
 
 </body>
 
